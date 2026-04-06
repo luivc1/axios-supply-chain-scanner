@@ -1,0 +1,4 @@
+# SHA256 checksums for axios-supply-chain-scanner
+# Verify with: sha256sum -c checksums.txt
+
+0b449ef43a69d6a2f079242d838bf99dda732abe6084b31a75e7b12c4ce7f40c  axios-scan.sh
