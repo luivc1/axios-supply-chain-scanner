@@ -23,6 +23,44 @@ chmod +x axios-scan.sh
 ./axios-scan.sh
 ```
 
+### 🔐 Verify Script Integrity
+
+Since this is a security tool, you should verify the script hasn't been tampered with before running it:
+
+```bash
+# After downloading, verify the checksum matches
+sha256sum axios-scan.sh
+```
+
+Compare the output against the hash in [`checksums.txt`](checksums.txt):
+
+```
+0b449ef43a69d6a2f079242d838bf99dda732abe6084b31a75e7b12c4ce7f40c  axios-scan.sh
+```
+
+Or verify automatically:
+
+```bash
+sha256sum -c checksums.txt
+```
+
+You should see `axios-scan.sh: OK`. If it fails, **do not run the script** — re-download from this repo or open an issue.
+
+## 🤖 Not Comfortable With the Terminal? Use Claude Code
+
+If you'd rather not run terminal commands manually, you can use [Claude Code](https://docs.anthropic.com/en/docs/claude-code) to do it for you. Just open Claude Code and paste this prompt:
+
+```
+Download and run the Axios supply chain scanner from
+https://github.com/luivc1/axios-supply-chain-scanner
+
+Verify the SHA256 checksum matches before running it.
+Show me the results and explain what they mean.
+If any issues are found, walk me through the remediation steps.
+```
+
+Claude Code will download the script, verify its integrity, run the scan, and explain the results in plain language — no terminal knowledge required.
+
 ## 🔎 What It Scans
 
 | Area | What it checks |
